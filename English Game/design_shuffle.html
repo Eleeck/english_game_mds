@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/layout_shuffle.css">
+</head>
+<body class="bg-light">
+    <header class="text-white text-center py-3 bg-dark">
+        <div class="container-fluid p-0">
+            <img src="CSS/banierre.png" class="img-fluid w-100" alt="Banner Image">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="lead">Click on the correct web designer's tools. Be aware of the traps.</p>
+        <a href="netwise_game.html"><button class="btn btn-outline-light">Go Back</button></a>
+    </header>
+    <div id="game-container">
+        <div id="score">Score : 0</div>
+        <div id="timer">Time : 30s</div>
+        <div id="buttons-container"></div>
+        <button id="start-btn" class="btn btn-primary btn-lg">START</button>
+    </div>
+    <div class="overlay" id="endGameOverlay" style="visibility: hidden;">
+        <div class="overlay-content p-3 bg-white rounded">
+            <h2 id="endGameMessage"></h2>
+            <button class="btn btn-primary" onclick="closeOverlay()" id ="ok">OK</button>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/layout_shuffle.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetWise</title>
+    
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <img src="CSS/banierre.png" class="img-fluid w-100" alt="Banner Image">
+    </div>
+    <header class=" text-white text-center py-3 header_class">
+        <h1>Welcome to Netwise add-on</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+                        <li class="nav-item"><a class="nav-link" href="netwise_game.html">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timer">Timer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Banner Image -->
+    
+
+    
+    <main class="container py-4">
+        <section id="rules" class="mb-5">
+            <h2 class="text-center mb-3">Game Rules</h2>
+            <p>Everything you need to play is explained below!</p>
+        
+            <!-- How to Play -->
+            <h3 class="mt-4">How to Play</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Starting the Game:</strong>
+                    <ul>
+                        <li>Choose your token.</li>
+                        <li>Each player rolls the dice to determine their starting yellow space.</li>
+                        <li>After placement, yellow spaces become Wild Card Spaces.</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <strong>Movement:</strong>
+                    <ul>
+                        <li>Roll the dice and move your piece forward the corresponding number of spaces.</li>
+                        <li>The space you land on determines your question category.</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <strong>Answering Questions:</strong>
+                    <ul>
+                        <li>Draw a card matching the category of your space.</li>
+                        <li>Start the timer when the question is revealed (30 seconds).</li>
+                        <li>Choose your difficulty:
+                            <ul>
+                                <li>Easy: Worth 1 point.</li>
+                                <li>Hard: Worth 3 points.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <strong>Earning Points:</strong>
+                    <ul>
+                        <li>Answer correctly within 30 seconds to earn points and keep the card.</li>
+                        <li>If you fail to answer, earn no points, and your turn ends.</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <strong>Special Spaces:</strong>
+                    <ul>
+                        <li><strong>Bonus/Penalty Spaces:</strong> Draw a card that can either boost your progress or waste other players’ time.</li>
+                        <li><strong>Challenge Spaces:</strong>
+                            <ul>
+                                <li>Another player picks a category for you to answer on yellow spaces or when on the same space as an opponent.</li>
+                                <li>If you answer correctly, earn a special card with unique effects to use on your turn.</li>
+                                <li>If you fail, your opponent earns the special card instead.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <!-- Materials -->
+            <h3 class="mt-4">Materials</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Game board with spaces corresponding to categories (Cybersecurity, Fake News, Internet History, SEO, UX).</li>
+                <li class="list-group-item">Deck of category cards (one deck per category).</li>
+                <li class="list-group-item">Dice for movement.</li>
+                <li class="list-group-item">Player pieces.</li>
+                <li class="list-group-item">At least one smartphone with a QR code scanner.</li>
+            </ul>
+        
+            <!-- Winning the Game -->
+            <h3 class="mt-4">Winning the Game</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Be the first player to collect at least 5 points in each of the five categories:
+                    <ul>
+                        <li>Cybersecurity</li>
+                        <li>Fake News</li>
+                        <li>Internet History</li>
+                        <li>SEO</li>
+                        <li>UX</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">Complete a mini-game in each category to validate your skills.</li>
+                <li class="list-group-item">Once all categories are mastered, the player becomes the Master of the Web and the wise of the Internet!</li>
+            </ul>
+        </section>
+        
+        
+        <section id="timer" class="mb-5 text-center">
+            <h2 class="mb-3">Timer</h2>
+            <div class="mb-3">
+                <label for="timerInput" class="form-label">Need more time? Change it:</label>
+                <input type="number" id="timerInput" class="form-control w-25 mx-auto" value="35" min="1">
+            </div>
+            <div id="timerDisplay" class="display-4 mb-3">35</div>
+            <button class="btn btn-success button_class" onclick="startTimer()">START</button>
+        </section>
+    </main>
+
+    <footer class=" text-center py-3 footer_class">
+        <section id="contact">
+            <h2 class="mb-2">Contact</h2>
+            <p>For any questions or suggestions, please contact us at <a href="mailto:contact@jeudesociete.com">contact@jeudesociete.com</a>.</p>
+        </section>
+        <p>&copy; 2024 Add-on for Board Game. All rights reserved.</p>
+    </footer>
+
+    <div class="overlay" id="timerOverlay">
+        <div class="overlay-content p-3 bg-white rounded text-center position-relative">
+            <!-- Hourglass Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor" class="bi bi-hourglass-split mb-3" viewBox="0 0 16 16">
+                <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+            </svg>
+            <!-- Timer Display -->
+            <div id="overlayTimerDisplay" class="display-4 mb-4">15</div>
+            
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center gap-3">
+                <button id="closeOverlay" class="btn btn-danger">Close</button>
+                <button id="resetOverlay" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        // Selecting overlay elements
+        const overlay = document.getElementById('timerOverlay');
+        const timerDisplay = document.getElementById('overlayTimerDisplay');
+        const closeButton = document.getElementById('closeOverlay');
+        const resetButton = document.getElementById('resetOverlay');
+        let countdown;
+        let initialTime = 0; // Variable pour stocker la valeur initiale du timer
+
+        // Close button action
+        closeButton.addEventListener('click', () => {
+            overlay.style.visibility = 'hidden'; // Cache l'overlay
+            clearInterval(countdown); // Arrête le timer
+        });
+
+        // Start timer function
+        function startTimer() {
+            const timerInput = document.getElementById('timerInput').value;
+            let timeLeft = parseInt(timerInput, 10);
+
+            if (isNaN(timeLeft) || timeLeft <= 0) {
+                alert("Please enter a valid duration for the timer.");
+                return;
+            }
+
+            // Stocke la valeur initiale pour le reset
+            initialTime = timeLeft;
+
+            // Initialise les affichages
+            document.getElementById('timerDisplay').textContent = timeLeft;
+            timerDisplay.textContent = timeLeft;
+            overlay.style.visibility = 'visible'; // Affiche l'overlay
+
+            // Démarre le compte à rebours
+            clearInterval(countdown); // Assure qu'aucun timer précédent ne tourne
+            countdown = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timerDisplay').textContent = timeLeft;
+                timerDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown); // Arrête le timer
+                    playSound(); // Joue le son
+                    overlay.style.visibility = 'hidden'; // Cache l'overlay
+                }
+            }, 1000);
+        }
+
+        // Reset button action
+        resetButton.addEventListener('click', () => {
+            clearInterval(countdown); // Arrête le timer actuel
+            document.getElementById('timerDisplay').textContent = initialTime;
+            timerDisplay.textContent = initialTime;
+
+            // Redémarre le compte à rebours
+            let timeLeft = initialTime;
+            countdown = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timerDisplay').textContent = timeLeft;
+                timerDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown); // Arrête le timer
+                    playSound(); // Joue le son
+                    overlay.style.visibility = 'hidden'; // Cache l'overlay
+                }
+            }, 1000);
+        });
+
+        // Function to play sound
+        function playSound() {
+            const audio = new Audio('sounds/error.mp3');
+            audio.play();
+        }
+
+    </script>
+</body>
+</html>

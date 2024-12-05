@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-box {
+    width: 100px;
+    height: 100px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 10px;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.nav-box:hover {
+    transform: scale(1.1);
+}
+
+.drop-zone {
+    border: 2px dashed #6c757d;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    min-height: 120px;
+    transition: background-color 0.2s;
+}
+
+.drop-zone.correct {
+    border-color: green;
+}
+
+.drop-zone.wrong {
+    border-color: red;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}

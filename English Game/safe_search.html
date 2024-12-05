@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News and Secure Searching Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <header class=" text-black text-center py-3">
+        <div class="container-fluid p-0">
+            <img src="CSS/banierre.png" class="img-fluid w-100" alt="Banner Image">
+        </div>
+        <h1 class="text-center mb-4">Fake News and Secure Searching Quiz</h1>
+        <p class="lead">Test your knowledge on secure searching and recognize fake news.</p>
+        <a href="netwise_game.html"> <button class="btn btn-success mt-3"> Go Back</button>
+        </a>
+    </header>
+    <div class="container mt-5 pb-5">
+       
+        <form id="quiz-form" class="shadow-lg p-4 bg-white rounded">
+            <div class="mb-3">
+                <label for="question1" class="form-label">1. What is fake news?</label>
+                <select id="question1" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) News that is intentionally false or misleading</option>
+                    <option value="b">b) News that is about celebrities</option>
+                    <option value="c">c) News from social media</option>
+                    <option value="d">d) News that is delayed</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question2" class="form-label">2. How can you identify fake news?</label>
+                <select id="question2" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) By checking the credibility of the source</option>
+                    <option value="b">b) By reading only headlines</option>
+                    <option value="c">c) By agreeing with your personal opinion</option>
+                    <option value="d">d) By sharing the news with others immediately</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question3" class="form-label">3. Why is it important to avoid spreading fake news?</label>
+                <select id="question3" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) It can cause confusion and harm to society</option>
+                    <option value="b">b) It makes you popular</option>
+                    <option value="c">c) It increases social media engagement</option>
+                    <option value="d">d) It helps the news spread faster</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question4" class="form-label">4. Which of these actions can help prevent the spread of fake news?</label>
+                <select id="question4" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) Fact-checking before sharing news</option>
+                    <option value="b">b) Ignoring the source of the information</option>
+                    <option value="c">c) Relying only on social media for information</option>
+                    <option value="d">d) Sharing news without verifying it</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question5" class="form-label">5. What is one way to ensure you are doing secure online research?</label>
+                <select id="question5" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) Using private browsing mode</option>
+                    <option value="b">b) Searching using only popular websites</option>
+                    <option value="c">c) Clicking on the first result you see</option>
+                    <option value="d">d) Ignoring website URLs</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question6" class="form-label">6. Which of these websites is most likely to provide credible information?</label>
+                <select id="question6" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) A government or educational website (.gov or .edu)</option>
+                    <option value="b">b) A website with sensational headlines</option>
+                    <option value="c">c) A random blog without sources</option>
+                    <option value="d">d) A website asking for personal information</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question7" class="form-label">7. What should you do if you come across suspicious or unverified information while researching?</label>
+                <select id="question7" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) Trust it if it aligns with your beliefs</option>
+                    <option value="b">b) Ignore it and continue with your search</option>
+                    <option value="c">c) Verify it with multiple reputable sources</option>
+                    <option value="d">d) Share it with others without checking</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question8" class="form-label">8. What role does HTTPS (a secure website) play in secure searching?</label>
+                <select id="question8" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) It indicates the website is secure and encrypts data sent to and from the site</option>
+                    <option value="b">b) It makes the website load faster</option>
+                    <option value="c">c) It means the website is always reliable</option>
+                    <option value="d">d) It makes the website look more professional</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question9" class="form-label">9. Which of these actions can improve the quality of your online research?</label>
+                <select id="question9" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) Using a variety of trusted sources</option>
+                    <option value="b">b) Only relying on opinion-based websites</option>
+                    <option value="c">c) Ignoring dates and publication times</option>
+                    <option value="d">d) Using only search engines with paid results</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question10" class="form-label">10. What is a fact-checking website that can help you verify news and claims?</label>
+                <select id="question10" class="form-select">
+                    <option value="">Select an answer</option>
+                    <option value="a">a) Snopes</option>
+                    <option value="b">b) Wikipedia</option>
+                    <option value="c">c) Twitter</option>
+                    <option value="d">d) Instagram</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Answers</button>
+            </div>
+        </form>
+        <div class="mt-3 text-center" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

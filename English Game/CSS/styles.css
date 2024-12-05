@@ -1,0 +1,227 @@
+/* Styles généraux pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Couleur de fond unifiée */
+}
+
+/* Section Rules Styling */
+#rules {
+    background-color: #7EC8E3; /* Fond bleu clair */
+    color: #fff; /* Texte en blanc pour contraste */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Section Titles */
+#rules h2,
+#rules h3 {
+    text-align: center;
+    color: #98FB98; /* Prune */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+#rules p {
+    font-size: 1.1rem;
+    color: #f9f9f9;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* List Items */
+#rules .list-group-item {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+#rules .list-group-item strong {
+    color: #f4ecec; /* Prune pour les sous-titres */
+}
+
+/* Sub-list Bullet Points */
+#rules ul ul {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+/* Special Keywords Styling */
+#rules .list-group-item li {
+    position: relative;
+}
+
+
+/* Materials and Winning Styling */
+#rules h3 {
+    margin-top: 3rem;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #rules {
+        padding: 1rem;
+    }
+    #rules h2, #rules h3 {
+        font-size: 1.5rem;
+    }
+    #rules .list-group-item {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* Styles spécifiques aux jeux ou sections */
+#password-game {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#result.alert {
+    display: inline-block;
+    width: 50%;
+}
+
+#hints {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #252525;
+    line-height: 1.5;
+}
+
+/* Canvas utilisé pour les connexions */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Styles pour l'overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Masqué par défaut */
+    z-index: 1050; /* Au-dessus des autres éléments */
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border: 5px solid #F4A460;
+    border-radius: 10px;
+    text-align: center;
+    animation: pulse 1s infinite; /* Animation */
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.6);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+/* Timer */
+#timerDisplay {
+    font-size: 3rem;
+}
+
+/* Styles des en-têtes et pieds de page */
+.header_class {
+    background-color: #67b6d1 !important ;
+    color: black !important ;
+   
+}
+.button_class{
+    background-color: #6faf6f !important;
+    color: rgb(255, 255, 255)  !important;
+}
+
+.check_btn{
+    background-color: #F4A460;
+    border: 2px solid black;
+}
+
+.check_btn:hover{
+    background-color: #6faf6f;
+    border: 2px solid black;
+}
+
+.reset_btn{
+    background-color: #0c0b0b;
+    color: rgb(186, 17, 17);
+}
+
+.reset_btn:hover{
+    background-color: rgb(186, 17, 17);
+    color: #0c0b0b;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.footer_class {
+    background-color: #0c0b0b !important ;
+    color: #f4a560a0;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.event {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: grab;
+}
+.event:hover {
+    background-color: #e9ecef;
+}
+
+.drop-zone { 
+    border: 2px dashed #6c757d; 
+    padding: 20px; 
+    margin: 10px; 
+    min-height: 150px; 
+    text-align: center; 
+    font-size: 18px; 
+}
+
+
+
+

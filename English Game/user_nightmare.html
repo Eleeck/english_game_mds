@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frustrating Mini-Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/nightmare.css">
+</head>
+<body class="bg-light">
+    <div id="game-container" class="container text-center py-5">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="game-screen active">
+            <h1>Welcome to the Challenge!</h1>
+            <p>Check the box to continue:</p>
+            <div>
+                <input type="checkbox" id="welcome-checkbox">
+                <label for="welcome-checkbox">I don't want to continue</label>
+            </div>
+            <button class="btn btn-primary mt-3" id="welcome-next">Next</button>
+
+            <!-- Useless Button 1 -->
+            <button class="btn btn-warning mt-3" id="useless-button-1">I do nothing</button>
+        </div>
+
+        <!-- Form Challenge Screen -->
+        <div id="form-screen" class="game-screen d-none">
+            <h1>Complete the Form</h1>
+            <form id="challenge-form">
+                <div class="mb-3">
+                    <label for="email">Enter your email:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Where" hint="You know the rules">
+                </div>
+                <div class="mb-3">
+                    <label for="name">Your name:</label>
+                    <input type="email" id="email" class="form-control" placeholder="When" hint="So do I">
+                </div>
+                <button class="btn btn-success" type="button" id="form-submit">Submit</button>
+                <button class="btn btn-info mt-3" type ="button" id="rickroll-button">???</button>
+            </form>
+
+            <!-- Useless Button 2 -->
+            <button class="btn btn-danger mt-3" id="useless-button-2">Click me for no reason</button>
+        </div>
+
+        <!-- Timer Screen -->
+        <div id="timer-screen" class="game-screen d-none">
+            <h1>Quick! Complete the form before time runs out!</h1>
+            <p>Time left: <span id="timer">10</span> seconds</p>
+            <button class="btn btn-danger" id="submit-time" type="button">Submit</button>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="game-screen d-none">
+            <h1 id="end-message"></h1>
+            <button class="btn btn-primary" id="restart-game">Restart Game</button>
+            <a href="https://youtu.be/xvFZjo5PgG0?si=VSX5Ll1iWilky42A"><button class="btn btn-primary" >Restart Game</button></a>
+            <a href="netwise_game.html"><button class="btn btn-primary" >Restart Game</button></a>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div id="popup" class="popup d-none">
+        <div class="popup-content">
+            <p>Distracted yet?</p>
+            <button id="close-popup" class="btn btn-danger">Close</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup d-none">
+        <div class="popup-content">
+            <p>Too focused? I don’t think so!</p>
+            <button id="close-popup2" class="btn btn-danger">Close</button>
+        </div>
+    </div>
+
+    <script src="script/nightmare.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Fond: #7EC8E3 (bleu clair)
+
+"N": #DDA0DD (prune)
+
+"E": #F4A460 (brun sable)
+
+"T": #F4A460 (brun sable)
+
+"W": #98FB98 (vert pâle)
+
+"I": #F4A460 (brun sable)
+
+"S": #F4A460 (brun sable)
+
+"E": #F4A460 (brun sable)
+
+
